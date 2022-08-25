@@ -1,0 +1,45 @@
+@import "../variable.scss";
+
+
+.navbar-collapse{
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-link{
+    color: $primary-text-color;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-right: 25px;
+}
+.footer{
+    margin-top: 50px;
+}
+.footer-text{
+    font-size: 15px;
+    color: $primary-text-color;
+}
+.footer-text-area{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    // justify-content: space-evenly;
+
+}
+.nav-link-img{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color:  $primary-text-color;
+    text-decoration: none;
+    
+}
+
+.footer-text-header{
+    color: $primary-text-color;
+    font-size: 18px;
+}

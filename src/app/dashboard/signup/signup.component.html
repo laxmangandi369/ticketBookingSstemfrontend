@@ -1,0 +1,61 @@
+<div class="container">
+    <br>
+    <br>
+    <form [formGroup]="formdetails" #myForm="ngForm">
+        <div class="form-group">
+            <span>First Name :</span>
+            <input type="text" placeholder="First Name" class="form-control" name="firstName" formControlName="firstName">
+            <label *ngIf="formdetails.controls['firstName'].invalid && formdetails.controls['firstName'].touched" style="color: red;">
+                *only alphabets allowed
+            </label>
+        </div>
+        <br>
+        <div class="form-group">
+            <span>Last Name :</span>
+            <input type="text" placeholder="Last Name" class="form-control" name="lastName" formControlName="lastName">
+
+            <label *ngIf="formdetails.controls['lastName'].invalid && formdetails.controls['lastName'].touched" style="color: red;">
+                *only alphabets allowed
+            </label>
+        </div>
+        <br>
+        <div class="form-group">
+            <span>Email :</span>
+            <input type="text" placeholder="Email" class="form-control" name="email" formControlName="email">
+            <label *ngIf="formdetails.controls['email'].invalid && formdetails.controls['email'].touched" style="color: red;">
+                *enter valid email address
+            </label>
+        </div>
+        <br>
+        <div class="form-group">
+            <span>Contact :</span>
+            <input type="number" placeholder="Contact" class="form-control" name="Contact" formControlName="contact">
+            <label *ngIf="formdetails.controls['contact'].invalid && formdetails.controls['contact'].touched" style="color: red;">
+                *only numbers allowed
+            </label>
+        </div>
+        <br>
+        <div class="form-group">
+            <span>Gender :</span>
+            <input type="text" placeholder="Gender" class="form-control" name="gender" formControlName="gender">
+            <label *ngIf="formdetails.controls['gender'].invalid && formdetails.controls['gender'].touched" style="color: red;">
+                *required
+            </label>
+        </div>
+        <br>
+        <div class="form-group">
+            <span>password :</span>
+            <input type="password" placeholder="password" class="form-control" name="password" formControlName="password">
+            <label *ngIf="formdetails.controls['password'].invalid && formdetails.controls['password'].touched" style="color: red;">
+                *must container min 8 characters<br>
+                *must have a uppercase as well as a lowercase<br>
+                *must contain a special characters<br>
+                *must contain a number
+            </label>
+        </div>
+        <div class="signup-buttons">
+            <button class="btn btn-danger" routerLink="/">cancle</button>
+            <button class="btn btn-success" routerLink="/movies" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">register</button>
+        </div>
+    </form>
+</div>

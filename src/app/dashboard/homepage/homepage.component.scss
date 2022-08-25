@@ -1,0 +1,71 @@
+.toggle-screen{
+   height: 500px;
+   width: 100%;
+}
+
+.card{
+    width: 35rem;
+    margin-right: 30px;
+}
+
+.movie-card{
+    padding: 35px;
+}
+.toggle-screen{
+    height: 500px;
+}
+.movie-card-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 6px;
+    border-top: (3px solid black );
+}
+.play-card-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 6px;
+    border-top: (3px solid black );
+
+}
+.card-header-text{
+    font-weight: 700;
+    font-size: 35px;
+}
+.card-text{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 45px;
+    font-weight: 600;
+}
+.card-header-link{
+    cursor: pointer;
+    // padding-right: 35px;
+}
+
+.movie-card{
+    // padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.coming-soon-movie{
+    height: 221px;
+}
+.coming-soon-movie-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    padding-top: 6px;
+    border-top: (3px solid black );
+}
+.booking-button{
+    position: absolute;
+    bottom: 5px;
+    width: 90%;
+}

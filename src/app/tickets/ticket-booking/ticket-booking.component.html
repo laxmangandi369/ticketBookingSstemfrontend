@@ -1,0 +1,42 @@
+<!-- <div class="container">
+  <h3>My Theatre</h3>
+  <br />
+  <br />
+  <div>
+  <div *ngFor="let theatre of theaterArr" style="display: flex">
+    <div
+      *ngFor="let seat of theatre.seats"
+      style="
+        margin-left: 10px;
+        background: lightgray;
+        width: 30px;
+        height: 20px;
+        text-align: center;
+      "
+    >
+      {{ seat }}
+      
+    </div>
+    <br />
+    <br />
+  </div>
+  
+</div>  -->
+<div class="container-fluid">
+  <div class="container movie-details-main mt-3">
+    <div class="movie-details alert alert-dark d-flex ">
+      <div class="movie-details-image">
+        <img src="{{currentShow.image_url}}">
+      </div>
+      <div class="movie-details-text">
+        <h3><b>Show Name :</b> {{ currentShow.name }}</h3>
+        <h5><b>Duration :</b> {{ currentShow.duration }}</h5>
+        <h5><b>Rating : </b>{{ currentShow.ratingRottenTomatoes + "%" }}</h5>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h3>Seat Layout</h3>
+    <i class="fa-solid fa-square"></i>
+  </div>
+</div>

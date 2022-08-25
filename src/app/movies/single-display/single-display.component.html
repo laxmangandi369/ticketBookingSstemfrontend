@@ -1,0 +1,13 @@
+<div class="container display-area-main">
+    <div>
+        <img class="display-area-image" [src]="showDetails.image_url">
+    </div>
+    <div class="display-area-text">
+        <h2 class="display-area-text-name"><b>Show Name :</b> {{showDetails.name}}</h2>
+        <h2 class="display-area-text-description"><b>Description :</b> {{showDetails.description}}</h2>
+        <h2 class="display-area-text-rating"><b>Rotten Tomatoes :</b> {{showDetails.ratingRottenTomatoes+'%'}}</h2>
+        <h2 class="display-area-text-timing"><b>Show Duration :</b> {{showDetails.duration}}</h2>
+        <button class="btn btn-dark btn-lg display-area-button" (click)="bookNow()"  routerLink="/booking">Book Now</button>
+    </div>
+
+</div>

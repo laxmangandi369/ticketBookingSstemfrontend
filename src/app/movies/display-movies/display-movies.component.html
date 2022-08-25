@@ -1,0 +1,24 @@
+<div class="container main-div">
+  <div
+    class="card display-movies col-md-3 mt-3"
+    *ngFor="let movies of allMovies"
+  >
+    <a [routerLink]="['/movies/singleMovie/'+movies.id]" >
+        <img class="card-title display-movie-image w-100" [src]="movies.image_url" />
+    </a>
+    <div class="display-movie-text">
+      <p class="card-text display-movie-name"><b>Name :</b>  {{ movies.name }}</p>
+      <p class="card-text display-movie-ratings"><b>Rating :</b>  {{ movies.ratingRottenTomatoes+'%' }}</p>
+    </div>
+    <div class="display-movie-discription">
+        <p class="card-text display-movie-discription"><b>Description :</b>  {{ movies.description }}</p>
+        <a [routerLink]="['/movies/singleMovie/'+movies.id]" class="more-details"><b>more details</b></a>
+    </div>  
+    <div class="movie-button">
+      <button class="btn btn-dark w-100" (click)="bookNow(movies)" routerLink="/booking">
+        book now
+      </button>
+    </div>
+  </div>
+</div>
+

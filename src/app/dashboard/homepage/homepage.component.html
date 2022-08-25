@@ -1,0 +1,135 @@
+<div
+  id="carouselExampleControls"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="4000">
+      <img
+        src="../../../assets/LandOfMine_CCWebsite_1600x900-1.jpg"
+        class="d-block w-100 p-40 toggle-screen"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img
+        src="../../../assets/atyf1poo8oe31.jpg"
+        class="d-block w-100 toggle-screen"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img
+        src="../../../assets/large-1466557422-feature.jpg"
+        class="d-block w-100 toggle-screen"
+        alt="..."
+      />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container">
+  <div class="movie-card-header">
+
+    <h5 class="card-header-text">Movies Playing Now</h5>
+    <a class="card-header-link" routerLink="/movies">SEE ALL</a>
+  </div>
+  <div class="container-fluid movie-card" >
+    <!-- <ngx-slick-carousel class="bcs"#slickModal="slick-carousel"  dots="true" infinite="false" speed="300" slides-to-show="3" touch-move="false" slides-to-scroll="1"> -->
+
+    <div class="card" *ngFor="let data of featuredMovieData">
+      <a [routerLink]="['/movies/singleMovie/'+data.id]"><img
+        [src]="data.image_url"
+        class="card-img-top"
+        alt="pic loding..."
+      /></a>
+      <div class="card-body d-flex flex-column">
+        <div class="card-text">
+          <span>
+            <b>Name :</b> {{data.name}}
+          </span>
+          <span>
+            <b>Rating :</b> {{data.ratingRottenTomatoes+"%"}}
+          </span>
+      </div>
+        <div class="booking-button ">
+          <button class="btn btn-dark mt-auto w-100" (click)="bookNow(data)" routerLink="booking">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="play-card-header">
+
+    <h5 class="card-header-text">Theater Plays Playing Now</h5>
+    <a class="card-header-link" routerLink="/theater">SEE ALL</a>
+  </div>
+
+  <div class="container-fluid movie-card" >
+    <!-- <ngx-slick-carousel class="bcs"#slickModal="slick-carousel"  dots="true" infinite="false" speed="300" slides-to-show="3" touch-move="false" slides-to-scroll="1"> -->
+
+    <div class="card" *ngFor="let data of featuredPlayData" >
+      <a [routerLink]="['/movies/singlePlay/'+data.id]"><img
+        [src]="data.image_url"
+        class="card-img-top"
+        alt="pic loding..."
+      /></a>
+      <div class="card-body d-flex flex-column">
+        <div class="card-text">
+          <span>
+            <b>Name :</b> {{data.name}}
+          </span>
+          <span>
+            <b>Rating :</b> {{data.ratingRottenTomatoes+"%"}}
+          </span>
+      </div>
+        <div class="booking-button ">
+          <button class="btn btn-dark mt-auto w-100" (click)="bookNow(data)" routerLink="booking">Book Now</button>
+        </div>
+      </div>
+  </div>
+</div>
+    <div class="coming-soon-movie-header">
+      <h5 class="card-header-text">New & Upcoming</h5>
+      <a class="card-header-link">SEE ALL</a>
+    </div>
+    <div class="coming-soon-movies">
+      <img
+        class="coming-soon-movie"
+        src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/227252/WTCS_OnLine_FNL_6072x9000_Marsh_01.jpg"
+      />
+      <img
+        class="coming-soon-movie"
+        src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/227045/Nope_2022b.jpg"
+      />
+      <img
+        class="coming-soon-movie"
+        src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/226016/DCPETS_VERT_MAIN_2764x4096_DOM_NP.jpg"
+      />
+      <img
+        class="coming-soon-movie"
+        src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/219625/tgmdomonlinedigitalkeyartt-cruisestandingjetv10.jpg"
+      />
+      <img
+        class="coming-soon-movie"
+        src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/228049/Beast2022.jpg"
+      />
+    </div>
+</div>

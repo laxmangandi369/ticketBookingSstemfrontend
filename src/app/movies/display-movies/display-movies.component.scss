@@ -1,0 +1,25 @@
+.movie-button{
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    width: 90%;
+    
+    
+}
+.display-movie-text{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.more-details{
+    float: right;
+    padding-bottom: 35px;
+}
+.main-div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.display-movies{
+    margin: 50px;
+    padding: 15px;
+}
